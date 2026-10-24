@@ -11,7 +11,7 @@ authors:
     given-names: Isha
   - family-names: Reddy
     given-names: Dastagiri B.
-repository-code: "https://github.com/REPLACE_USER/soc-arrhenius-kalman-priors"
+repository-code: "https://github.com/suyash101101/soc-arrhenius-kalman-priors"
 # identifiers:
 #   - type: doi
 #     value: 10.5281/zenodo.NNNNNNN

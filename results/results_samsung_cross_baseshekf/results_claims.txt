@@ -1,0 +1,8 @@
+[FAILS ] Fusion has the lowest RMSE of all eight estimators
+[FAILS ] Fusion has the lowest MAE of all eight estimators
+[FAILS ] Fusion beats best single estimator (BiLSTM): bootstrap CI of dRMSE excludes 0
+[HOLDS ] Paired Wilcoxon p < 0.05 against all seven estimators
+[FAILS ] PI-LSTM receives non-trivial NNLS weight (> 1%)
+[HOLDS ] Fusion beats the best Kalman filter (SHEKF)
+[FAILS ] Fusion beats the LSTM, GRU, CNN-LSTM and LSTM+KF baselines
+[HOLDS ] Fused single-sample latency < 100 ms

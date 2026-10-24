@@ -1,0 +1,6 @@
+process noise Qn (SOC, V_RC): diag(1e-09, 1e-08)
+measurement noise Rn = identified voltage-residual variance per parameter set (V^2): [0.02081 0.00121 0.0002152 0.007616 0.003274 0.000508]
+initial covariance P0 = diag(0.01, 0.0001); initial SOC error given: +-U(0.10,0.20) (cfg.initErr = 0.15)
+SPKF: alpha_u 1, beta 2, kappa 1
+IEKF: at most 5 iterations, tolerance 1e-6; SHEKF: forgetting factor 0.98, R bounded to [0.2, 20] x Rn, Q and bias fixed
+identified at [-20 10 40 -10 0 25] C

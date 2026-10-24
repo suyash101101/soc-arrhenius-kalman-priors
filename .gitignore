@@ -1,0 +1,8 @@
+.DS_Store
+*.mat
+cache_*
+__pycache__/
+*.pyc
+.env
+*_secret*
+edge_benchmark/INSTALL_TRAINED_ON_BOARD.sh

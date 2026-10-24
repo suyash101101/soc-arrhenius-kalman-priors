@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Temperature-Parametrised Kalman Priors and Learned Corrections for Lithium-Ion State-of-Charge Estimation"
+message: "If you use this software, please cite it and the accompanying paper."
+type: software
+authors:
+  - family-names: Nahar
+    given-names: Suyash D.
+  - family-names: Bist
+    given-names: Keya
+  - family-names: Priya
+    given-names: Isha
+  - family-names: Reddy
+    given-names: Dastagiri B.
+repository-code: "https://github.com/REPLACE_USER/soc-arrhenius-kalman-priors"
+# identifiers:
+#   - type: doi
+#     value: 10.5281/zenodo.NNNNNNN
+license: MIT
+version: "1.0.0"

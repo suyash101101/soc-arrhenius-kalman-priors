@@ -1,0 +1,34 @@
+UNO Q edge_benchmark — two runs (Arduino App Lab / aarch64)
+Device: 0 (aarch64), Python 3.13.5, NumPy 2.2.4, 1 thread
+Peak RSS 34.6 MB | BiLSTM 158849 params | PI-LSTM 75841 | fp32 weights 0.94 MB
+
+RUN 1
+Estimator       median ms   p95 ms   p99 ms   max ms
+EKF                 0.214    0.263    0.310    0.438
+SPKF                0.965    1.240    1.374    1.622
+IEKF                0.475    0.515    0.548    0.692
+SHEKF               0.238    0.267    0.278    0.313
+BiLSTM             22.172   26.379   30.178   34.329
+PI-LSTM            11.000   11.348   11.809   14.652
+Pruned stack       33.609   34.592   35.841   42.347
+
+RUN 2
+Estimator       median ms   p95 ms   p99 ms   max ms
+EKF                 0.216    0.239    0.258    0.309
+SPKF                0.872    0.979    1.128    1.691
+IEKF                0.470    0.514    0.559    0.680
+SHEKF               0.238    0.261    0.279    0.342
+BiLSTM             21.402   21.874   22.544   29.205
+PI-LSTM            10.855   11.166   11.555   12.704
+Pruned stack       32.773   33.374   34.199   35.122
+
+TRAINED WEIGHTS (2026-10-25, aarch64 board, Python 3.13.5, NumPy 2.2.4, OMP_NUM_THREADS=1)
+Source: edge_results_trained_board.json (+ run2). Peak RSS ~35 MB. Params BiLSTM 158849, PI-LSTM 75841.
+
+RUN trained-1
+BiLSTM 35.765 | PI-LSTM 18.108 | Pruned stack 54.337 (median ms)
+
+RUN trained-2
+BiLSTM 36.126 | PI-LSTM 17.753 | Pruned stack 53.212 (median ms)
+
+Note: denser/trained float values ran ~1.6x slower than the earlier random-weight medians (~22 / 11 / 33 ms) on the same board; still << 1 s sample period. No accuracy claim.

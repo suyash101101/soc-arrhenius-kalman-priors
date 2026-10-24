@@ -1,0 +1,62 @@
+{
+ "info": {
+  "cpu": "0",
+  "machine": "aarch64",
+  "python": "3.13.5",
+  "numpy": "2.2.4",
+  "threads": "1",
+  "window": 30,
+  "n": 500,
+  "weights": "/home/arduino/edge_trained/trained_weights.npz",
+  "peak_rss_MB": 34.87890625,
+  "params": {
+   "BiLSTM": 158849,
+   "PILSTM": 75841,
+   "weights_MB_fp32": 0.93876
+  }
+ },
+ "results": {
+  "EKF": {
+   "median_ms": 0.210629,
+   "p95_ms": 0.24194765,
+   "p99_ms": 0.30377991,
+   "max_ms": 0.368602
+  },
+  "SPKF": {
+   "median_ms": 0.8597325,
+   "p95_ms": 1.03749445,
+   "p99_ms": 1.2418341899999998,
+   "max_ms": 1.368572
+  },
+  "IEKF": {
+   "median_ms": 0.46084349999999996,
+   "p95_ms": 0.4987117,
+   "p99_ms": 0.52647581,
+   "max_ms": 0.59918
+  },
+  "SHEKF": {
+   "median_ms": 0.233234,
+   "p95_ms": 0.2603918,
+   "p99_ms": 0.29381681,
+   "max_ms": 0.345529
+  },
+  "BiLSTM": {
+   "median_ms": 35.764802,
+   "p95_ms": 36.5064342,
+   "p99_ms": 37.14121771,
+   "max_ms": 45.509551
+  },
+  "PI-LSTM": {
+   "median_ms": 18.1082145,
+   "p95_ms": 18.63313035,
+   "p99_ms": 19.010428029999996,
+   "max_ms": 19.931641
+  },
+  "Pruned stack": {
+   "median_ms": 54.3370725,
+   "p95_ms": 55.3115845,
+   "p99_ms": 55.64098331,
+   "max_ms": 57.804933
+  }
+ }
+}

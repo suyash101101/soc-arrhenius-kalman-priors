@@ -1,0 +1,16 @@
+[HOLDS ] Fusion has the lowest RMSE of all eight estimators
+[HOLDS ] Fusion has the lowest MAE of all eight estimators
+[FAILS ] Fusion beats best single estimator (PI-LSTM): bootstrap CI of dRMSE excludes 0
+[FAILS ] Paired Wilcoxon p < 0.05 against all seven estimators
+[HOLDS ] PI-LSTM receives non-trivial NNLS weight (> 1%)
+[HOLDS ] Fusion beats the best Kalman filter (EKF)
+[HOLDS ] Adding PI-LSTM to the fusion does not increase RMSE
+[FAILS ] Simplex NNLS <= equal weights, inverse-MSE and unconstrained LS
+[HOLDS ] Cross-fitted NNLS <= plain NNLS on TEST
+[FAILS ] Load-gated NNLS <= plain NNLS on TEST
+[HOLDS ] Temperature-gated NNLS <= plain NNLS on TEST
+[HOLDS ] Unconstrained LS yields negative or non-unit-sum weights
+[HOLDS ] Physics residual reduces PI-LSTM RMSE (single seed)
+[HOLDS ] Physics residual lowers PI-LSTM RMSE on average over seeds
+[FAILS ] Split-conformal coverage within 3 points of target on TEST
+[HOLDS ] Fused single-sample latency < 100 ms

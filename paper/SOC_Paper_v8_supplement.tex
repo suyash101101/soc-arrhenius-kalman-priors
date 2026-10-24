@@ -1,0 +1,77 @@
+% Supplementary material for IEEE TTE submission (paper v8).
+% Moved from the main manuscript to meet the TTE regular-paper length limit
+% (target 6--8 pages; regular papers over 10 pages may be rejected).
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb,booktabs,graphicx,multirow,siunitx,xcolor,cite}
+\graphicspath{{figs/}}
+\begin{document}
+\title{Supplementary Material: Temperature-Parametrised Kalman Priors and Learned Corrections for Lithium-Ion State-of-Charge Estimation}
+\author{Suyash~D.~Nahar\emph{et~al.}}
+\maketitle
+\begin{abstract}
+Tables and one figure moved from the main manuscript for length. Numbering below matches the labels used in the main text (\texttt{tab:conv}, \texttt{tab:diag}, \texttt{tab:oracle}, \texttt{tab:aged}, \texttt{fig:tracking}).
+\end{abstract}
+
+\section{Convergence (Main Text Table~\ref*{tab:conv})}
+\begin{table}[!t]
+\caption{Convergence Time (Median, s; Minimum 30~s) and Share of Segments That Converge Into $\pm2$\% for 60~s}
+\label{tab:conv}
+\centering\scriptsize
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{LG-L} & \multicolumn{2}{c}{S-L}\\
+Estimator & Time & Share & Time & Share\\
+\midrule
+\input{tables/conv.tex}
+\end{tabular}
+\end{table}
+
+\section{SPKF Diagnostic (Main Text Table~\ref*{tab:diag})}
+\begin{table}[!t]
+\caption{SPKF Diagnostic, Legacy Versus Corrected Sigma-Point Scaling: Segments With Non-Positive-Definite $\mathbf{P}$ or Failed Cholesky, Mean Segment RMSE (\%), Segments With Maximum Error Above 20\%}
+\label{tab:diag}
+\centering\scriptsize
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Run and setting & Failures & Mean RMSE & $>$20\%\\
+\midrule
+\input{tables/diag.tex}
+\end{tabular}
+\end{table}
+
+\section{Parameter Oracle (Main Text Table~\ref*{tab:oracle})}
+\begin{table}[!t]
+\caption{Parameter Oracle, LG-E: Test RMSE (\%) When One Extrapolated Quantity Is Replaced by Its Directly Identified Value (SHEKF Prior Run)}
+\label{tab:oracle}
+\centering\scriptsize
+\begin{tabular}{@{}rlccc@{}}
+\toprule
+$T$ ($^\circ$C) & Variant & EKF & SPKF & SHEKF\\
+\midrule
+\input{tables/oracle_lg.tex}
+\end{tabular}
+\end{table}
+
+\section{Aged-Cell Transfer (Main Text Table~\ref*{tab:aged})}
+\begin{table}[!t]
+\caption{Braun: Fresh-Cell Test RMSE and Aged-Cell Transfer (\%), Nothing Refitted. Left Block: B-W Models; Right Block: B-R Models (SHEKF Prior)}
+\label{tab:aged}
+\centering\scriptsize
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+ & \multicolumn{4}{c}{B-W} & \multicolumn{4}{c}{B-R}\\
+ Estimator & Fresh & Aged & MAE & Max & Fresh & Aged & MAE & Max\\
+\midrule
+\input{tables/aged.tex}
+\end{tabular}
+\end{table}
+
+\section{Tracking Figure (Main Text Fig.~\ref*{fig:tracking})}
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figs/v8_tracking_matlab.pdf}
+\caption{LG-L: SOC tracking on UDDS at $25$~$^\circ$C (left) and $-20$~$^\circ$C (right), starting from a wrong initial SOC: (a) learners and fusion, (b) filters, (c) error of the fusion and the SPKF. At $-20$~$^\circ$C the filters keep an offset for the whole record.}
+\label{fig:tracking}
+\end{figure*}
+
+\end{document}

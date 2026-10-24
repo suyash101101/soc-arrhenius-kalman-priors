@@ -1,0 +1,2 @@
+min eigenvalue of P over all used segments: EKF 1.04e-07 | SPKF 9.18e-08 | IEKF 1.04e-07 | SHEKF 9.68e-08
+steps with lambda_min <= 0: EKF 0 | SPKF 0 | IEKF 0 | SHEKF 0 ; SPKF Cholesky failures 0

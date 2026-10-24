@@ -1,0 +1,11 @@
+tempC,variant,EKF,SPKF,IEKF,SHEKF
+0,extrapolated (as used),2.1206,2.0391,2.1104,2.5349
+0,R0 direct,2.6899,2.6092,2.6580,3.1057
+0,R1 direct,1.6871,1.5913,1.6842,1.9787
+0,tau direct,2.1882,2.1330,2.1465,2.5904
+0,Q direct,1.8939,1.7986,1.8871,2.2286
+0,OCV direct,1.7300,1.6246,1.7509,2.0683
+0,R0; R1; tau direct,1.9824,1.9175,1.9559,2.4466
+0,all direct (incl. Rn),1.8124,1.6530,1.8252,1.8772
+0,tau = nearest identified,2.1685,2.1039,2.1201,2.5641
+0,tau = median identified,2.0868,2.0061,2.0792,2.5229

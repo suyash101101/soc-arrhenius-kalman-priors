@@ -1,0 +1,10 @@
+estimator,val_rmse_pct
+EKF,1.09111
+SPKF,1.15075
+IEKF,1.22871
+SHEKF,1.43412
+LSBoost,0.79286
+PI-LSTM,0.91877
+BiLSTM,0.74673
+NNLS Fusion (fitted on VAL),0.71134
+base_filter,spkf
